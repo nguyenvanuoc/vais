@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/logo-1.png" type="image/x-icon">
+    <title>Login</title>
+    <script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/vendor/select2/js/select2.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+</head>
+<body>
+    <div class="login-canvas">
+        
+        <div class="box-image">
+            <div class="image">
+                <img src="assets/img/logo.png" style="height: 60px;" alt="">
+            </div>
+            <div class="title">Phần mềm bóc băng</div>
+            <div class="desc">Hệ thống chuyển đổi từ audio sang text</div>
+        </div>
+        <div class="box-content">
+            <div class="box-form">
+                <div class="head">
+                    <div class="title">Đăng nhập</div>
+                    <div class="desc">Tận hưởng không gian làm việc thông minh cùng nhiều tiện ích hấp dẫn</div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon-right password">
+                        <input type="text" class="form-control" placeholder="Nhập tên đăng nhập">
+                        <span class="icon isax-user1"></span>
+                    </div>
+            
+                </div>
+                <div class="form-group">
+                    <div class="input-icon-right password">
+                        <input type="password" value="01234343" class="form-control" placeholder="Nhập mật khẩu">
+                        <span class="icon isax-eye1"></span>
+                    </div>
+                </div>
+                <div class="check-form">
+                    <div class="check-action">
+                        <input type="checkbox" class="check">
+                        <span class="name">Ghi nhớ mật khẩu</span>
+                    </div>
+                    <a href="#" class="link main">Quên mật khẩu?</a>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".password .icon").click(function(){
+            if($(this).parent().hasClass("show")){
+                $(this).parent().removeClass("show");
+                $(this).parent().find("input").attr("type","password");
+                $(this).addClass("bc-show").removeClass("bc-hidden");
+            }else{
+                $(this).parent().find("input").attr("type", "text");
+                $(this).parent().addClass("show");
+                $(this).removeClass("bc-show").addClass("bc-hidden");
+            }
+            
+
+        });
+    </script>
+</body>
+</html>
